@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Search</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Full viewport height */
+        margin: 0;
+        background-color: #f8f9fa; /* Light background like Google */
+      }
+      form {
+        position: relative;
+      }
+
+      /* Style the search bar */
+      input[type="text"] {
+        width: 400px;
+        padding: 12px 12px 12px 40px;
+        border: 1px solid #ccc;
+        border-radius: 25px; /* Rounded corners */
+        font-size: 16px;
+        box-shadow: 0 2px 4px rgb(207, 206, 206);
+      }
+
+      /* Style the search button */
+      input[type="submit"] {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #4285f4; /* Google's blue color */
+        color: white;
+        border: none;
+        border-radius: 20px; /* Rounded corners */
+        cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+      }
+
+      input[type="submit"]:hover {
+        background-color: #357ae8; /* Darker blue on hover */
+      }
+      #search {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+      }
+      #advanced {
+        position: absolute;
+        top: 30px;
+        right: 10px;
+        cursor: pointer;
+      }
+      .fa-search {
+        position: absolute;
+        left: 15px; /* Position the icon to the left inside the input */
+        top: 50%;
+        transform: translateY(-50%);
+        color: #aaa;
+      }
+      input::placeholder {
+        color: #aaa;
+        padding-left: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="https://google.com/search">
+      <i class="fa fa-search"></i>
+      <input type="text" name="q" placeholder="Search Google" />
+      <input value="Google Search" type="submit" />
+    </form>
+    <a id="search" href="gSearchImage.html">Google Search Image</a>
+    <br />
+    <a id="advanced" href="gAdvanceSearch.html">Google Advanced Search</a>
+  </body>
+</html>

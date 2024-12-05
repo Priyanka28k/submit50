@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Search Image</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        height: 100vh;
+        background-color: #f8f9fa;
+      }
+      input[type="text"] {
+        width: 400px;
+        padding: 12px 12px 12px 40px;
+        border: 1px solid #ccc;
+        border-radius: 25px;
+        font-size: 16px;
+        box-shadow: 0 2px 4px rgb(207, 206, 206);
+      }
+
+      input[type="submit"] {
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        background-color: #4285f4;
+        cursor: pointer;
+        border: none;
+        border-radius: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+      input[type="submit"]:hover {
+        background-color: #357ae8;
+      }
+      button {
+        position: absolute;
+        top: 2%;
+        right: 1%;
+        cursor: pointer;
+      }
+      form {
+        position: relative;
+      }
+      .fa-search {
+        position: absolute;
+        left: 20px; /* Position the icon to the left inside the input */
+        top: 50%;
+        transform: translateY(-50%);
+        color: #aaa;
+      }
+      input::placeholder {
+        color: #aaa;
+        padding-left: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="back-button" onclick="window.history.back();">
+      <b>&#11013;</b>Go Back
+    </button>
+    <!-- https://www.google.com/search?tbm=isch&q= -->
+    <!-- tbm=isch: This tells Google that the search is specifically for images.
+     q=: This is where the search query is added. -->
+    <form action="https://www.google.com/search" method="get">
+      <i class="fa fa-search"></i>
+      <input type="text" name="q" placeholder="Search Google Images" />
+      <!-- Hidden input to specify image search -->
+      <input type="hidden" name="tbm" value="isch" />
+      <input type="submit" value="Google Search Image" />
+    </form>
+  </body>
+</html>
